@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "65fd845d-eb81-46bb-a96f-927a6910fa40",
+		"name": "SISTEMA PQR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RESPONDER",
+			"item": [
+				{
+					"name": "PUT - Responder Solicitud",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\" : \"Investigaremos lo sucedido y nos pondremos en contacto\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pqr-back-system.herokuapp.com/api/solicitudes/responder/619b1d4b2edd6de64af81d2b",
+							"protocol": "https",
+							"host": [
+								"pqr-back-system",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"solicitudes",
+								"responder",
+								"619b1d4b2edd6de64af81d2b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT - Responder Reclamo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"El funcionario con identificación #443 fue sancionado y multado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pqr-back-system.herokuapp.com/api/solicitudes/responderReclamo/619b1d4b2edd6de64af81d2b",
+							"protocol": "https",
+							"host": [
+								"pqr-back-system",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"solicitudes",
+								"responderReclamo",
+								"619b1d4b2edd6de64af81d2b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "APIS IMPLEMENTADAS FRONT",
+			"item": [
+				{
+					"name": "POST  Nueva Solicitud",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"Juan Felipe Londoño Gaviria\",\r\n    \"date\": \"2021-11-21\",\r\n    \"details\": {\r\n        \"solicitud\": {\r\n            \"type\": \"Q\",\r\n            \"subject\": \"Mala atención\",\r\n            \"description\": \"Mala atención por parte de un funcionario\",\r\n            \"status\": false\r\n        }, \r\n        \"reply\": {\r\n            \"description\": \"\"\r\n        },\r\n        \"isSatisfied\": null\r\n    },\r\n    \"claim\": {\r\n        \"claim\": {\r\n            \"subject\" : \"\",\r\n            \"description\": \"\",\r\n            \"status\": false\r\n        },\r\n        \"reply\": {\r\n            \"description\": \"\"\r\n        }\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pqr-back-system.herokuapp.com/api/solicitudes",
+							"protocol": "https",
+							"host": [
+								"pqr-back-system",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"solicitudes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Obtener solicitudes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pqr-back-system.herokuapp.com/api/solicitudes",
+							"protocol": "https",
+							"host": [
+								"pqr-back-system",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"solicitudes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT - Reclamar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subject\" : \"No he recibido respuestas frente a lo sucedido\" ,\r\n    \"description\": \"Desde que se comunicaron conmigo que iban a investigar y a tomar médidas no he tenido más información\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pqr-back-system.herokuapp.com/api/solicitudes/reclamar/619a85eb52e4e0866d918d2c",
+							"protocol": "https",
+							"host": [
+								"pqr-back-system",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"solicitudes",
+								"reclamar",
+								"619a85eb52e4e0866d918d2c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET  - Obtener solicitud específica",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pqr-back-system.herokuapp.com/api/solicitudes/619a85eb52e4e0866d918d2c",
+							"protocol": "https",
+							"host": [
+								"pqr-back-system",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"solicitudes",
+								"619a85eb52e4e0866d918d2c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT - Nivel de Satisfacción",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://pqr-back-system.herokuapp.com/api/solicitudes/satisfacion/619a85eb52e4e0866d918d2c",
+							"protocol": "https",
+							"host": [
+								"pqr-back-system",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"solicitudes",
+								"satisfacion",
+								"619a85eb52e4e0866d918d2c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
