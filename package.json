@@ -4,10 +4,10 @@
   "description": "Servidor PQR ",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index"
   },
   "engines": {
-    "node": "8.9.2"
+    "node": ">=12.9.0"
   },
 
   "author": "Juan Felipe Londoño",
