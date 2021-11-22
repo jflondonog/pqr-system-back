@@ -53,7 +53,7 @@ Desarrollado por: Juan Felipe Londoño Gaviria
                 "status": {"type": "boolean"}, #TRUE: Revisado, FALSE: No Revisado,
             },
             "reply": {
-                "description"
+                "description": {"type": "string"}
             }
         }
     }
